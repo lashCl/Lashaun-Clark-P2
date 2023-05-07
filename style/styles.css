@@ -44,6 +44,21 @@ body {
   }
 }
 
+button:hover {
+  background-color: #2c3566;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #3a3a3c;
+  border: none;
+  color: #f0f0f0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 1rem;
+}
+
 /* Style the header and navigation menu */
 header {
   padding: 1rem;
@@ -110,6 +125,42 @@ h2 {
 
 #generate-idea:hover {
   background-color: #2c3566;
+}
+
+#add-to-favorites {
+  padding: 0.75rem 1.5rem;
+  background-color: #3a3a3c;
+  border: none;
+  color: #f0f0f0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 1rem;
+}
+
+#add-to-favorites:hover {
+  background-color: #2c3566;
+}
+
+.idea-container {
+  display: flex;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.remove-favorite {
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  margin-left: 1rem;
+  border-radius: 5px;
+}
+
+#idea-display {
+  margin-right: 1rem;
 }
 
 /* Style the idea display, history, and favorites list */
