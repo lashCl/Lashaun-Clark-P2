@@ -1,0 +1,140 @@
+/* Reset margins and paddings for consistency across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the background color, font family, and text color for the entire page */
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1c1e;
+  color: #f0f0f0;
+  min-height: 100vh;
+  font-size: 115%;
+}
+
+#blob-effect {
+  height: 24vmax;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, aquamarine, mediumpurple);
+  animation: rotate 20s infinite;
+  opacity: 0.8;
+  z-index: -1;
+  filter: blur(100px);
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1 1.5;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+/* Style the header and navigation menu */
+header {
+  padding: 1rem;
+  background-color: #2c2c2e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+
+nav li {
+  margin-left: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f0f0f0;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #9fa8da;
+}
+
+/* Style the main content sections */
+main {
+  padding: 2rem;
+  flex-grow: 1;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h1,
+h2 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 250%;
+}
+
+#generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style the Generate Idea button */
+#generate-idea {
+  padding: 0.75rem 1.5rem;
+  background-color: #3a3a3c;
+  border: none;
+  color: #f0f0f0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 1rem;
+}
+
+#generate-idea:hover {
+  background-color: #2c3566;
+}
+
+/* Style the idea display, history, and favorites list */
+#idea-display,
+#idea-history,
+#favorite-ideas {
+  padding: 1rem;
+  background-color: #3a3a3c;
+  border-radius: 5px;
+}
+
+#idea-display {
+  margin-bottom: 1.5rem;
+}
+
+#idea-history li,
+#favorite-ideas li {
+  padding: 0.5rem 0;
+  list-style-type: none;
+}
+
+/* Style the footer */
+footer {
+  padding: 1rem;
+  background-color: #2c2c2e;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
