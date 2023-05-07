@@ -40,10 +40,38 @@ function generateWebsiteIdea() {
   const randomIndex = Math.floor(Math.random() * websiteIdeas.length);
   // Get the website idea at the random index
   const idea = websiteIdeas[randomIndex];
-  // Update the idea display with the generated idea
-  ideaDisplay.textContent = idea;
-  // Add the generated idea to the idea history list
+
+  // Apply the scramble effect to the generated idea
+  applyScrambleEffect(ideaDisplay, idea);
+
   addToHistory(idea);
+}
+
+function applyScrambleEffect(element, finalText) {
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.toLowerCase();
+  let interval = null;
+  let iteration = 0;
+
+  clearInterval(interval);
+
+  interval = setInterval(() => {
+    element.textContent = finalText
+      .split('')
+      .map((letter, index) => {
+        if (index < iteration) {
+          return finalText[index];
+        }
+
+        return letters[Math.floor(Math.random() * 26)];
+      })
+      .join('');
+
+    if (iteration >= finalText.length) {
+      clearInterval(interval);
+    }
+
+    iteration += 1 / 3;
+  }, 2);
 }
 
 function addToHistory(idea) {
