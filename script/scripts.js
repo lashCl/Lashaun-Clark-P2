@@ -45,6 +45,9 @@ function generateWebsiteIdea() {
   applyScrambleEffect(ideaDisplay, idea);
 
   addToHistory(idea);
+
+  ideaDisplay.style.display = 'block';
+  addToFavoritesBtn.style.display = 'inline-block';
 }
 
 function applyScrambleEffect(element, finalText) {
